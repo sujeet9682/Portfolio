@@ -31,7 +31,7 @@ const Project = () => {
   return (
     <>
       <div id="project" className="main-container py-16 px-10">
-        <h1 className="text-center underline font-bold text-4xl pb-15">
+        <h1 className="text-center text-slate-200 underline text-4xl pb-15">
           My Projects
         </h1>
         <div className="project-container flex flex-col lg:flex-row items-center justify-center">

@@ -42,16 +42,17 @@ const Banner = () => {
         <div className=" flex-1 w-full   items-center justify-center ">
           <div className=" m-14 mb-6 lg:p-5 space-y-3">
             {/* text */}
-            <h3 className="xl:text-3xl lg:text-2xl md:text-2xl text-xl font-bold">
-              Hey!, It's Me
+            <h3 className="xl:text-3xl text-white lg:text-2xl md:text-2xl text-xl">
+              Hello there!, It's Me
             </h3>
-            <h1 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">
-              Sujeet Kumar Gupta
+            <h1 className="xl:text-5xl lg:text-4xl text-white md:text-3xl text-2xl">
+              <span className="text-orange-600 font-bold">Sujeet </span>Kumar
+              Gupta
             </h1>
-            <h2 className="xl:text-2xl lg:text-xl md:text-xl text-xl underline font-bold typing">
+            <h2 className="xl:text-2xl lg:text-xl text-slate-200 md:text-xl text-xl underline typing">
               <span ref={el}></span>
             </h2>
-            <p>
+            <p className="text-white">
               A tech enthusiast. Seeking new opportunities to expand my skills.
             </p>
 

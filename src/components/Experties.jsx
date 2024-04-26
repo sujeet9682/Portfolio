@@ -64,15 +64,17 @@ const Experties = () => {
   return (
     <>
       <div id="skills" className="pb-14 ">
-        <h1 className="text-center font-bold text-4xl underline py-8">
+        <h1 className="text-center text-slate-200 text-4xl underline py-8">
           My Skills
         </h1>
         <div className="main-container flex flex-col lg:flex-row">
           {/* text  */}
           <div className=" justify-center md:items-center flex pb-8">
             <div className="text-center w-4/5 space-y-3">
-              <h1 className="text-3xl font-bold ">I love using Tech Stacks</h1>
-              <p>
+              <h1 className="text-3xl text-neutral-200">
+                I love using Tech Stacks
+              </h1>
+              <p className="text-white">
                 Tech stacks are fantastic! They're like a palette of tools and
                 technologies that we use to create amazing digital creations.
               </p>

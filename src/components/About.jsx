@@ -2,37 +2,37 @@ import { useState } from "react";
 import BannerImage from "../assets/sujeet.jpg";
 
 const About = () => {
-  const [info, setInfo] = useState({
-    image: BannerImage,
-    title: "Java Developer",
-    desc1: ` Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
-                maxime, ex dolorum in beatae voluptates sapiente possimus eum
-                cumque quod facere corporis vitae similique sint! Iste `,
-    desc2: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
-                maxime, ex dolorum in beatae voluptates sapiente possimus eum
-                cumque quod facere corporis vitae similique `,
-  });
-
   return (
     <>
-      <div className="main-container bg-gray-100 py-16">
-        <h2 className="underline font-bold text-center text-4xl  pb-15">
-          About Me
-        </h2>
+      <div id="about" className="main-container py-5">
+        <h2 className="underline font-bold text-center text-4xl">About Me</h2>
 
-        <div className="flex items-center">
-          <div className="w-full flex justify-center">
-            <img
-              className=" rounded-full h-2/3 w-2/3"
-              src={info.image}
-              alt="Sujeet Kumar Gupta"
-            />
+        <div className="flex justify-around pt-7 flex-col lg:flex-row">
+          <div className="w-full flex items-center justify-center">
+            <div className="sm:w-2/3 space-y-3 w-full p-8 text-center sm:text-left sm:p-0">
+              <h1 className="text-3xl font-semibold text-center ">
+                Know who I'M
+              </h1>
+              <p className="text-lg  leading-snug sm:leading-relaxed">
+                Hello, I am <span>Sujeet Kumar Gupta</span>, a College Student.
+                <br />
+                I am currently currently pursuing B.Tech in Computer Science at
+                IPEC Ghaziabad.
+                <br /> Some activities that I love to do! <br />
+                <i class="fa-solid fa-fire-flame-curved"></i> Playing Games
+                <br />
+                <i class="fa-solid fa-suitcase-rolling"></i> Travelling
+              </p>
+            </div>
           </div>
-          <div className="w-full flex justify-center">
-            <div className="w-2/3 space-y-5">
-              <h1 className="text-5xl font-semibold">{info.title}</h1>
-              <p>{info.desc1}</p>
-              <p>{info.desc2}</p>
+          <div className="w-full flex justify-center text-center lg:text-left">
+            <div className="w-2/3 space-y-1 text-lg">
+              <h1 className="text-3xl font-semibold">
+                <i class="fa-solid fa-graduation-cap"></i> Education{" "}
+              </h1>
+              <p>2021 - Present</p>
+              <p>B. Tech (CSE)</p>
+              <p>Inderprastha Engineering College, Ghaziabad</p>
             </div>
           </div>
         </div>

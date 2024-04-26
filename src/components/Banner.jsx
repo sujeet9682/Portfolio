@@ -1,9 +1,19 @@
-import BannerImage from "../assets/sujeet.jpg";
+import BannerImage from "../assets/sk.png";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 import Typed from "typed.js";
 import { useRef, useEffect } from "react";
 
 const Banner = () => {
+  function openGmail() {
+    var emailAddress = "jisujeet3@gmail.com";
+
+    var gmailComposeUrl =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+      encodeURIComponent(emailAddress);
+
+    window.open(gmailComposeUrl, "_blank");
+  }
+
   const el = useRef(null);
 
   useEffect(() => {
@@ -13,7 +23,7 @@ const Banner = () => {
       startDelay: 100,
       typeSpeed: 100,
       backSpeed: 30,
-      backDelay: 1000,
+      backDelay: 3000,
       loop: true,
     });
 
@@ -26,57 +36,65 @@ const Banner = () => {
   return (
     <>
       <div
-        // style={{
-        //   backgroundImage: `url(${bannerBackground})`,
-        //   backgroundSize: "cover",
-        // }}
-        className="main-container flex items-center"
+        id="banner"
+        className="main-container flex justify-center flex-col md:flex-row pt-20"
       >
-        <div className=" flex w-full mt-20 justify-center">
-          <div className="w-2/3 space-y-3">
+        <div className=" flex-1 w-full   items-center justify-center ">
+          <div className=" m-14 mb-6 lg:p-5 space-y-3">
             {/* text */}
-            <h3 className="text-3xl font-bold">Hey!, It's Me</h3>
-            <h1 className="text-5xl font-bold">Sujeet Kumar Gupta</h1>
-            <h2 className="text-2xl underline font-bold typing">
+            <h3 className="xl:text-3xl lg:text-2xl md:text-2xl text-xl font-bold">
+              Hey!, It's Me
+            </h3>
+            <h1 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold">
+              Sujeet Kumar Gupta
+            </h1>
+            <h2 className="xl:text-2xl lg:text-xl md:text-xl text-xl underline font-bold typing">
               <span ref={el}></span>
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-              fugiat. Dolorem, dignissimos perspiciatis officia quaerat itaque
-              aut ipsam asperiores cum!
+              A tech enthusiast. Seeking new opportunities to expand my skills.
             </p>
 
             <div className="icons-container space-x-5 flex">
-              <a className="cursor-pointer hover:border  px-3 py-3 h-11 w-11 rounded-full text-orange-500 items-center justify-center flex bg-black">
+              <a
+                href="https://github.com/sujeet9682"
+                className="bannerIcon"
+                target="_blank"
+              >
                 <i className="fa-brands text-2xl fa-github"></i>
               </a>
-              <a className="cursor-pointer hover:border  px-3 py-3 h-11 w-11 rounded-full text-orange-500 items-center justify-center flex bg-black">
+              <a
+                href="https://www.linkedin.com/in/sujeet-id"
+                className="bannerIcon"
+                target="_blank"
+              >
                 <i className="fa-brands text-2xl fa-linkedin-in"></i>
               </a>
-              <a className="cursor-pointer hover:border  px-3 py-3 h-11 w-11 rounded-full text-orange-500 items-center justify-center flex bg-black">
+              <a className="bannerIcon">
                 <i className="fa-brands text-2xl fa-instagram"></i>
               </a>
             </div>
 
             <br />
 
-            <a
+            <button
               href="/contact"
+              onClick={openGmail}
               className=" text-1xl px-4 py-3 bg-orange-600 text-white rounded-full hover:border shadow-2xl"
             >
               Contact Me{" "}
               <span>
                 <i class="fa-regular  fa-circle-down"></i>
               </span>
-            </a>
+            </button>
           </div>
         </div>
 
-        <div className=" w-full mt-20 mb-10 ml-20 flex justify-center">
+        <div className=" p-8 flex-1 flex items-center justify-center">
           {/* image */}
           <img
             src={BannerImage}
-            className="object-fill h-2/3 w-2/3 rounded-full shadow-lg border"
+            className="object-contain h-2/3 w-2/3 max-h-96 max-w-96 md:h-auto md:w-auto rounded-full shadow-lg border"
           />
         </div>
       </div>

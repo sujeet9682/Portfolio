@@ -63,38 +63,31 @@ const Experties = () => {
   ]);
   return (
     <>
-      <div className="pb-14">
-        <h1 className="text-center font-bold text-4xl underline py-14">
-          My Experties
+      <div id="skills" className="pb-14 ">
+        <h1 className="text-center font-bold text-4xl underline py-8">
+          My Skills
         </h1>
-        <div
-          style={{
-            backgroundImage: `url(${bannerBackground})`,
-            backgroundSize: "cover",
-          }}
-          className="main-container flex py-16"
-        >
+        <div className="main-container flex flex-col lg:flex-row">
           {/* text  */}
-          <div className=" justify-center flex ">
-            <div className="text-center w-2/3 space-y-4">
-              <h1 className="text-3xl font-bold ">I love these Tech Stacks</h1>
+          <div className=" justify-center md:items-center flex pb-8">
+            <div className="text-center w-4/5 space-y-3">
+              <h1 className="text-3xl font-bold ">I love using Tech Stacks</h1>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore beatae eligendi fugit neque vel error. Unde maxime
-                quisquam voluptate omnis.
+                Tech stacks are fantastic! They're like a palette of tools and
+                technologies that we use to create amazing digital creations.
               </p>
-              <button className="bg-orange-600 px-3 py-2 border rounded-full shadow-lg cursor-pointer hover:bg-orange-500">
+              <button className="bg-orange-600 px-3 py-2 border hidden rounded-full shadow-lg cursor-pointer hover:bg-orange-500">
                 <a href="#">Contact Me</a>
               </button>
             </div>
           </div>
-          <div className=" flex justify-center">
+          <div className=" flex w-full  justify-center">
             {/* skillset */}
-            <div className="flex w-2/3 space-x-3 flex-wrap h-fit justify-center">
+            <div className="flex w-4/5 lg:w-fit  flex-wrap h-fit items-center justify-center">
               {skills.map((skill) => (
                 <p
                   key={skill.id}
-                  className="bg-gray-400 text-1xl font-semibold px-3 py-1 mt-3 border w-fit hover:bg-orange-600 hover:cursor-pointer rounded-full"
+                  className="bg-gray-400 text-1xl font-semibold px-2 py-1 ml-3 mt-3 border w-fit hover:bg-orange-600 hover:cursor-pointer rounded-full"
                 >
                   {skill.skill}
                 </p>
